@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>DIVES WEB PAGE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body ng-app="identifikasi">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+                <div ng-include="'app/views/support/header.html'"></div>
+                <!-- Header End -->
+
+                    <!-- Main Content -->
+					<div id="main">
+						    <!-- Banner -->
+							<article class="post">
+								<header ng-controller="BannerController">
+									<div class="title">
+										<h2><a ui-sref="detail({id_pengguna: id_pengguna})">{{nopol}}</a></h2>
+										<p>Nopol diatas atas nama <b>{{nama}}</b></p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2015-11-01">November 1, 2015</time>
+										<a href="#" class="author"><span class="name">Detail</span><img src="images/avatar.jpg" alt="" /></a>
+									</div>
+								</header>
+							</article>
+                            <!-- Banner End -->
+
+                            <!-- This Content -->
+                            <div ui-view=""></div>
+                            <!-- This Content End -->
+					</div>
+                <!-- Main Content End -->
+
+				<!-- Sidebar -->
+                <div ng-include="'app/views/support/sidebar.html'"></div>
+                <!-- Sidebar End -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+            <script src="components/angular/angular.min.js"></script>
+            <script src="components/angular/angular-ui-router.js"></script>
+            <script src="components/angular/angular-resource.min.js"></script>
+			<script src="components/angular/angular-resource.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/ie/respond.min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+            <script src="app/app.js"></script>
+			<script src="app/services/BannerServices.js"></script>
+			<script src="app/controllers/BannerController.js"></script>
+			<script src="app/controllers/DetailsController.js"></script>
+	</body>
+</html>

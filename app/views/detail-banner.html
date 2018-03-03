@@ -1,0 +1,83 @@
+<article class="post">
+    <blockquote>
+        Data pengguna atas nama <b>{{Pengguna.nama}}</b>
+    </blockquote>
+    <div class="table-wrapper">
+        <table>
+            <tbody>
+            <tr>
+                <td>NIK</td>
+                <td>:</td>
+                <td>{{Pengguna.nik}}</td>
+            </tr>
+            <tr>
+                <td>NAMA</td>
+                <td>:</td>
+                <td>{{Pengguna.nama}}</td>
+            </tr>
+            <tr>
+                <td>ALAMAT</td>
+                <td>:</td>
+                <td>{{Pengguna.alamat}}</td>
+            </tr>
+            <tr>
+                <td>NO. TELP</td>
+                <td>:</td>
+                <td>{{Pengguna.no_telp}}</td>
+            </tr>
+            <tr>
+                <td>e-MAIL</td>
+                <td>:</td>
+                <td>{{Pengguna.email}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <blockquote>
+        Data kendaraan atas nama <b>{{Pengguna.nama}}</b>
+    </blockquote>
+    <div class="table-wrapper">
+        <table>
+            <tbody>
+            <tr>
+                <td>JENIS KENDARAAN</td>
+                <td>:</td>
+                <td>{{Kendaraan.jenis_kendaraan}}</td>
+            </tr>
+            <tr>
+                <td>NOPOL</td>
+                <td>:</td>
+                <td>{{Kendaraan.nopol}}</td>
+            </tr>
+            <tr>
+                <td>MERK KENDARAAN</td>
+                <td>:</td>
+                <td>{{Kendaraan.merk_kendaraan}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <blockquote>
+        Data perekaman yang dilakukan dengan kendaraan atas nama <b>{{Pengguna.nama}}</b>
+    </blockquote>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>NOPOL</th>
+                    <th>TGL KEREKAM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="history in History">
+                    <td>{{$index + 1}}</td>
+                    <td>{{history.nopol}}</td>
+                    <td>{{history.tgl_update}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</article>
