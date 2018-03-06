@@ -16,6 +16,19 @@ angular
                 url: '/',
                 templateUrl: 'app/views/home.html'
             })
+            .state('list', {
+                url: '/list',
+                templateUrl: 'app/views/list.html',
+                controller: 'ListController'
+            })
+            .state('author', {
+                url: '/author',
+                templateUrl: 'app/views/author.html'
+            })
+            .state('about', {
+                url: '/about',
+                templateUrl: 'app/views/about.html'
+            })
             .state('detail', {
                url: '/detail/@/:id_pengguna',
                templateUrl: 'app/views/detail-banner.html',

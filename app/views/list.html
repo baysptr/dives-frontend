@@ -1,0 +1,28 @@
+<article class="post">
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th><b>NO</b></th>
+                    <th><b>NOPOL</b></th>
+                    <th><b>MERK KENDARAAN</b></th>
+                    <th><b>MERK KENDARAAN</b></th>
+                    <th><b><center>#</center></b></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in history">
+                    <td>{{$index+1}}</td>
+                    <td>{{data.nopol}}</td>
+                    <td>{{data.merk_kendaraan}}</td>
+                    <td>{{data.nama}}</td>
+                    <td>
+                        <center>
+                            <a class="button small" href="#/detail/@/{{data.id_pengguna}}">Detail</a>
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</article>
